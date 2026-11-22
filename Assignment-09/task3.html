@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!-- Name: Abhinav | Roll No: BCS2025447 H | Assignment 9 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Local Storage</title>
+</head>
+<body>
+  <input type="text" id="note" placeholder="Write a note">
+  <button id="save">Save</button>
+  <script>
+    const box = document.getElementById("note");
+    box.value = localStorage.getItem("note") || "";
+
+    document.getElementById("save").addEventListener("click", function () {
+      localStorage.setItem("note", box.value);
+    });
+  </script>
+</body>
+</html>

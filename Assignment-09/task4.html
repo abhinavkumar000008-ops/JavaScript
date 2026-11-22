@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- Name: Abhinav | Roll No: BCS2025447 H | Assignment 9 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz</title>
+</head>
+<body>
+  <p>What is 2 + 3?</p>
+  <label><input type="radio" name="answer" value="4"> 4</label>
+  <label><input type="radio" name="answer" value="5"> 5</label>
+  <label><input type="radio" name="answer" value="6"> 6</label>
+  <br><br>
+  <button id="check">Check answer</button>
+  <p id="result"></p>
+  <script>
+    document.getElementById("check").addEventListener("click", function () {
+      const chosen = document.querySelector('input[name="answer"]:checked');
+      const result = document.getElementById("result");
+      if (chosen && chosen.value === "5") {
+        result.textContent = "Correct";
+      } else {
+        result.textContent = "Try again";
+      }
+    });
+  </script>
+</body>
+</html>
